@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
-  * main: entry point
-  * return: always 1 (success)
+  * main - Entry point
+  * Return: Always 1 (Success)
   */
 int main(void)
 {
-	printf("and the piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	write(STDOUT_FILENO, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }
