@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
@@ -17,10 +18,10 @@ int main(void)
 	/* your code goes there */
 	printf("Last digit of %d is %d and is ", n, (n%10));
 	if (n == 0)
-		printf("%d\n", zero)
+		printf("%d\n", zero);
 	else if (n < 6)
-		printf("less than 6 and not 0") 
+		printf("less than 6 and not 0");
 	else if (n > 5)
-		printf("greater than %d\n", 5)
+		printf("greater than %d\n", 5);
 	return (0);
 }
