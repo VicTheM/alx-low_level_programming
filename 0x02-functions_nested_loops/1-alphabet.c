@@ -15,5 +15,4 @@ void print_alphabet(void)
 		_putchar(*char_pointer);
 		++char_pointer;
 	}
-	return (0);
 }
