@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  * Description: prints using a UDF
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
-	char *char_pointer = "_putchar\n";
+	char *char_pointer = "abcdefghijklmnopqrstuvwxyz\n";
 
 	while (*char_pointer)
 	{
