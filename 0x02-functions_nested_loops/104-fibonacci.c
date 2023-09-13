@@ -12,12 +12,12 @@ int main(void)
 	double nth;
 	int counter;
 
-	printf("%lf, %lf, ", first, second);
+	printf("%f, %f, ", first, second);
 
 	for (counter = 2; counter < 98; counter++)
 	{
 		nth = first + second;
-		printf("%lf, ", nth);
+		printf("%f, ", nth);
 		first = second;
 		second = nth;
 	}
