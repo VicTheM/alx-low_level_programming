@@ -12,7 +12,7 @@ int main(void)
 	double nth;
 	int counter;
 
-	printf("%f, %f, ", first, second);
+	printf("%0.0f, %0.0f, ", first, second);
 
 	for (counter = 2; counter < 98; counter++)
 	{
