@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *
- * return: always 0 (success)
+ * Return: always 0 (success)
  */
 int main(void)
 {
@@ -17,9 +17,15 @@ int main(void)
 	for (counter = 2; counter < 98; counter++)
 	{
 		nth = first + second;
-		printf("%f, ", nth);
-		first = second;
-		second = nth;
+
+		if (counter == 97)
+			printf("%0.0f", nth);
+		else
+		{
+			printf("%0.0f, ", nth);
+			first = second;
+			second = nth;
+		}
 	}
 	printf("\n");
 
