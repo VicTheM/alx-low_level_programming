@@ -8,16 +8,16 @@
  */
 void print_alphabet_x10(void)
 {
-	int max_print = 10;
+	int max_print;
 	char *char_pointer = "abcdefghijklmnopqrstuvwxyz\n";
 
-	while (max_print > 0)
+	for (max_print = 0; max_print < 10; max_print++)
 	{
 		while (*char_pointer)
 		{
 			_putchar(*char_pointer);
 			++char_pointer;
 		}
-		--max_print;
+		char_pointer -= 27;
 	}
 }
