@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	long double first = 1;
-	long double second = 2;
-	long double nth;
+	unsigned long first = 1;
+	unsigned long second = 2;
+	unsigned long nth;
 	int counter;
 
-	printf("%0.0f, %0.0f, ", first, second);
+	printf("%lu, %lu, ", first, second);
 
-	for (counter = 2; counter < 98; counter++)
+	for (counter = 3; counter < 98; counter++)
 	{
 		nth = first + second;
 
 		if (counter == 97)
-			printf("%0.0f", nth);
+			printf("%lu", nth);
 		else
 		{
-			printf("%0.0f, ", nth);
+			printf("%lu, ", nth);
 			first = second;
 			second = nth;
 		}
