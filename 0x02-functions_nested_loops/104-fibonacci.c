@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	double first = 1;
-	double second = 2;
-	double nth;
+	long double first = 1;
+	long double second = 2;
+	long double nth;
 	int counter;
 
 	printf("%0.0f, %0.0f, ", first, second);
