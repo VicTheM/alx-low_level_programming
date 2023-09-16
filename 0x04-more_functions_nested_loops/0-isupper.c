@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper() - checks if a character is upper
+ * _isupper - checks if a character is upper
  * Description: prints using a UDF
  *
  * return: Always 1 (true) 0 (false)

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _idigitr() - checks if a character is upper
+ * _isdigit - checks if a character is upper
  * Description: prints using a UDF
  *
  * return: Always 1 (true) 0 (false)
