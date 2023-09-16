@@ -12,7 +12,7 @@ void print_triangle(int size)
 	int jj;
 	int ii;
 
-	ii = 0
+	ii = 0;
 
 	if ( size <= 0 )
 		_putchar('\n');
@@ -24,12 +24,12 @@ void print_triangle(int size)
 			{
 				_putchar(' ');
 			}
-			while (ii < counter);
+			while (ii < counter)
 			{
 				_putchar('#');
-				ii++
+				ii++;
 			}
-			_putchar('\n')
+			_putchar('\n');
 		}
 	}
 }
