@@ -4,17 +4,24 @@
  * more_numbers - checks if a character is upper
  * Description: prints using a UDF
  *
- * return: Always 1 (true) 0 (false)
+ * Return: Always 1 (true) 0 (false)
  */
 void more_numbers(void)
 {
-	int char_pointer;
-	int counter;
+	int x, y;
 
-	for (counter = 0; counter < 10; counter++)
+	for (x = 0; x < 10; x++)
 	{
-		for (char_pointer = 0; char_pointer < 15; char_pointer++)
-			_putchar('char_pointer');
+		for (y = 0; y <= 14; y++)
+		{
+			if (y > 9)
+			{
+				_putchar((y / 10) + '0');
+			}
+
+			_putchar((y % 10) + '0');
+		}
+
 		_putchar('\n');
 	}
 }

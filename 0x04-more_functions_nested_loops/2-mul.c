@@ -2,6 +2,8 @@
 
 /**
  * mul - checks if a character is upper
+ * @a: first operand
+ * @b: second operand
  * Description: prints using a UDF
  *
  * return: Always 1 (true) 0 (false)

@@ -9,7 +9,7 @@
 void print_most_numbers(void)
 {
 	char *char_pointer = "01356789\n";
-	
+
 	while (*char_pointer)
 	{
 		_putchar(*char_pointer);
