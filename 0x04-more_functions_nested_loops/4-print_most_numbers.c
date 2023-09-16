@@ -8,7 +8,13 @@
  */
 void print_most_numbers(void)
 {
+<<<<<<< HEAD
 	char *char_pointer = "01356789\n";
+=======
+	char *char_pointer;
+
+	*char_pointer = "01356789\n";
+>>>>>>> 1bc95a3bf83e183de62fbc2cd2e56fc3e60a2e23
 	
 	while (*char_pointer)
 	{

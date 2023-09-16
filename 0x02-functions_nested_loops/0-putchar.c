@@ -4,7 +4,7 @@
  * main - Entry point
  * Description: prints using a UDF
  *
- * return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
