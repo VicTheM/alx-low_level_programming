@@ -9,7 +9,9 @@
 
 void print_number(int n)
 {
-	int d = n, p = 0, m = 1;
+	int d = n;
+	int p = 0;
+	int m = 1;
 
 	if (d < 0)
 	{
