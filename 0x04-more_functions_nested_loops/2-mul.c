@@ -6,7 +6,7 @@
  * @b: second operand
  * Description: prints using a UDF
  *
- * return: Always 1 (true) 0 (false)
+ * Return: Always 1 (true) 0 (false)
  */
 int mul(int a, int b)
 {
