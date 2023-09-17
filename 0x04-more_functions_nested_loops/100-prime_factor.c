@@ -1,41 +1,38 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Prints the largest prime factor of the number 612852475143.
  *
- * Return: always 0
- *
+ * Return: 0
  */
+
 int main(void)
 {
-	unsigned long number = 612852475143;
-	unsigned int max_pf;
-	int flag;
-	unsigned long ii;
-	unsigned int jj;
+	unsigned long int num = 612852475143;
+	int CurrMaxPrime = 0;
+	unsigned long int i = 3;
 
-	/* get factors */
-	for (ii = (number/2); ii > 0; --ii)
+	if (num % 2 == 0)
 	{
-		if (number % ii == 0)
+		CurrMaxPrime = 2;
+		while (num % 2 == 0)
 		{
-			flag = 1;
-			for (jj = 2; jj < ii / 2; jj++)
-			{
-				if (ii % jj == 0) /* not prime */
-				{
-					flag = 0;
-					break;
-				}
-			}
-			if (flag == 1)
-			{
-				max_pf = ii;
-				printf("%u\n", max_pf);
-				return (0);
-			}
+			num = num / 2;
 		}
 	}
+	while (i <= num * 0.5)
+	{
+		while (num % i == 0)
+		{
+			CurrMaxPrime = i;
+			num = num / i;
+		}
+		i += 2;
+	}
+
+	if (num > 2)
+		CurrMaxPrime = num;
+
+	printf("%d\n", CurrMaxPrime);
 	return (0);
 }
-
