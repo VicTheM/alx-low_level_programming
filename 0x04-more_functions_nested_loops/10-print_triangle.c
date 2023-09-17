@@ -9,10 +9,8 @@
 void print_triangle(int size)
 {
 	int counter;
-	int jj;
-	int ii;
-
-	ii = 0;
+	int space;
+	int harsh;
 
 	if ( size <= 0 )
 		_putchar('\n');
@@ -20,14 +18,13 @@ void print_triangle(int size)
 	{
 		for (counter = 1; counter < (size + 1); counter++)
 		{
-			for (jj = (size - counter); jj > 0; --jj)
+			for (space = (size - counter); space > 0; --space)
 			{
 				_putchar(' ');
 			}
-			while (ii < counter)
+			for (harsh = counter; harsh > 0; --harsh)
 			{
 				_putchar('#');
-				ii++;
 			}
 			_putchar('\n');
 		}

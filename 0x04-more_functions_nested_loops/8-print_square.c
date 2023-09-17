@@ -2,9 +2,10 @@
 
 /**
  * print_square - checks if a character is upper
+ * @size: breadth of square
  * Description: prints using a UDF
  *
- * return: Always 1 (true) 0 (false)
+ * Return: Always 1 (true) 0 (false)
  */
 void print_square(int size)
 {
