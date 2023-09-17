@@ -2,9 +2,10 @@
 
 /**
  * print_triangle - checks if a character is upper
+ * @size: height of triangle
  * Description: prints using a UDF
  *
- * return: Always 1 (true) 0 (false)
+ * Return: Always 1 (true) 0 (false)
  */
 void print_triangle(int size)
 {
@@ -12,7 +13,7 @@ void print_triangle(int size)
 	int space;
 	int harsh;
 
-	if ( size <= 0 )
+	if (size <= 0)
 		_putchar('\n');
 	else
 	{
