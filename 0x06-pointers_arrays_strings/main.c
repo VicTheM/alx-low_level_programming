@@ -9,8 +9,11 @@ int main(void)
 	char *ptr;
 
 	printf("%s\n", s1);
-	ptr = _strcat(s1, s2);
-	printf("%s", ptr);
+	ptr = _strncat(s1, s2, 1);
+	printf("%s\n", ptr);
+	printf("%s\n", s1);
+	ptr = _strncat(s1, s2, 1024);
+	printf("%s - %s", s1, ptr);
 
 	return 0;
 }
