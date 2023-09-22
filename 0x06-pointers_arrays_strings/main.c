@@ -44,11 +44,19 @@ int main(void)
 	ptr = string_toupper(str);
 	printf("%s", ptr);
 	printf("%s", str);
-	*/
+	
 	char str[] = "Expect the best. Prepafe.\nhello woild! hello-world 0123hello\n";
 	char *ptr;
 	ptr = cap_string(str);
 	printf("%s", ptr);
 	printf("%s", str);
+	*/
+	print_number(98);
+	_putchar('\n');
+	print_number(1024);
+	print_number(0);
+	print_number(-9889766);
+	_putchar('\n');
+
 	return 0;
 }

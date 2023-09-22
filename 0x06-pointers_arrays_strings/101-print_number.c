@@ -1,9 +1,9 @@
 #include "main.h"
-
-
 /**
  * print_number - Prints an integer.
  * @n: Integer
+ *
+ * Return: void
  */
 void print_number(int n)
 {
@@ -13,7 +13,7 @@ void print_number(int n)
 	if (num < 0)
 	{
 		num *= -1;
-		_putchar("-");
+		_putchar('-');
 	}
 	while (num / m != 0)
 	{
