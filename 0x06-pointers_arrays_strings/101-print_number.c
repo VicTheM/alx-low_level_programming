@@ -53,8 +53,13 @@ void print_number(int n)
 
 	if (n < 0)
 	{
+<<<<<<< HEAD
 		_putchar('-');
 		n *= -1;
+=======
+		num *= -1;
+		_putchar("-");
+>>>>>>> parent of b01f91f (Update 101-print_number.c)
 	}
 	number = n;
 

@@ -51,11 +51,17 @@ int main(void)
 	printf("%s", ptr);
 	printf("%s", str);
 	*/
+	print_number(8);
+	_putchar('\n');
 	print_number(98);
 	_putchar('\n');
 	print_number(1024);
+	_putchar('\n');
 	print_number(0);
-	print_number(-9889766);
+	_putchar('\n');
+	print_number(-55);
+	_putchar('\n');
+	print_number(-11474836);
 	_putchar('\n');
 
 	return 0;
