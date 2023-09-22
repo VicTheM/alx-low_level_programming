@@ -17,14 +17,15 @@ void print_array(int *a, int n)
 }*/
 
 int main(void)
-{
-	/*
+{/*
 	char s1[] = "Hello";
 	char s2[] = "World!";
 
 	printf("%d\n", _strcmp(s1, s2));
 	printf("%d\n", _strcmp(s2, s1));
 	printf("%d\n", _strcmp(s1, s1));
+	*/
+	/*
 	printf("%s", s2);
 	printf("%s\n", ptr);
 	ptr = _strncat(s1, s2, 1024);
@@ -36,11 +37,17 @@ int main(void)
 	print_array(a, sizeof(a)/sizeof(int));
 	reverse_array(a, sizeof(a)/sizeof(int));
 	print_array(a, sizeof(a)/sizeof(int));
-	*/
+
 	char str[] = "look up!\n";
 	char *ptr;
 
 	ptr = string_toupper(str);
+	printf("%s", ptr);
+	printf("%s", str);
+	*/
+	char str[] = "Expect the best. Prepafe.\nhello woild! hello-world 0123hello\n";
+	char *ptr;
+	ptr = cap_string(str);
 	printf("%s", ptr);
 	printf("%s", str);
 	return 0;
