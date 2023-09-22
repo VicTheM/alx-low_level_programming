@@ -1,5 +1,45 @@
 #include "main.h"
 /**
+ * get_pow - returns the exponent contained in an integer
+ * @n: integer to be tested;
+ *
+ * Return: power as int
+ */
+int get_pow(int n)
+{
+	int pow;
+	int divisor;
+
+	pow = 0;
+	divisor = 10;
+	while (n / divisor != 0)
+	{
+		pow++;
+		divisor *= 10;
+	}
+	return (pow);
+}
+
+/**
+ * _pow - raise a number to a power
+ * @x: index
+ * @y: power
+ *
+ * Return: x raised to y as int
+ */
+int _pow(int x, int y)
+{
+	int power = 1;
+
+	while (y != 0)
+	{
+		power *= x;
+		--y;
+	}
+	return (power);
+}
+
+/**
  * print_number - Prints an integer.
  * @n: Integer
  *
@@ -7,34 +47,30 @@
  */
 void print_number(int n)
 {
-	int num = n, pow = 0, m = 10;
-	int digit = 0;
+	int number = n;
+	int power;
+	int buffer;
 
-	if (num < 0)
+	if (number < 0)
 	{
-		num *= -1;
 		_putchar('-');
-	}
-	while (num / m != 0)
-	{
-		pow++;
-		m *= 10;
+		number *= -1;
 	}
 
-	m = 1;
-	while (pow >= 0)
+	if (number >= 0  && number <= 9)
 	{
-		int i = 0;
-
-		num = num - digit * m;
-		m = 1;
-		while (i < pow)
+		_putchar(number + '0');
+	}
+	else
+	{
+		power = get_pow(number);
+		while (power != 0)
 		{
-			m *= 10;
-			i++;
+			buffer = number / _pow(10, power);
+			_putchar(buffer + '0');
+			number -= buffer * _pow(10, power);
+			--power;
 		}
-		digit = num / m;
-		_putchar(digit + '0');
-		pow--;
+		_putchar(number + '0');
 	}
 }
