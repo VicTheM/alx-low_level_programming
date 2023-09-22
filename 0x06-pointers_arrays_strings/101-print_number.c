@@ -5,10 +5,10 @@
  *
  * Return: power as int
  */
-int get_pow(int n) 
+int get_pow(unsigned int n)
 {
 	int pow;
-	int divisor;
+	unsigned int divisor;
 
 	pow = 0;
 	divisor = 10;
@@ -27,9 +27,9 @@ int get_pow(int n)
  *
  * Return: x raised to y as int
  */
-int _pow(int x, int y)
+unsigned int _pow(int x, int y)
 {
-	int power = 1;
+	unsigned int power = 1;
 
 	while (y != 0)
 	{
@@ -38,7 +38,6 @@ int _pow(int x, int y)
 	}
 	return (power);
 }
-
 /**
  * print_number - Prints an integer.
  * @n: Integer
@@ -57,7 +56,6 @@ void print_number(int n)
 		n *= -1;
 	}
 	number = n;
-
 	if (number <= 9)
 	{
 		_putchar(number + '0');
