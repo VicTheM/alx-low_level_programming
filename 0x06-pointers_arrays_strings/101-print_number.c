@@ -5,10 +5,10 @@
  *
  * Return: power as int
  */
-int get_pow(unsigned int n) 
+int get_pow(int n) 
 {
 	int pow;
-	unsigned int divisor;
+	int divisor;
 
 	pow = 0;
 	divisor = 10;
@@ -27,9 +27,9 @@ int get_pow(unsigned int n)
  *
  * Return: x raised to y as int
  */
-unsigned int _pow(int x, int y)
+int _pow(int x, int y)
 {
-	unsigned int power = 1;
+	int power = 1;
 
 	while (y != 0)
 	{
