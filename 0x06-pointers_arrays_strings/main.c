@@ -51,18 +51,26 @@ int main(void)
 	printf("%s", ptr);
 	printf("%s", str);
 	*/
-	print_number(8);
-	_putchar('\n');
-	print_number(98);
-	_putchar('\n');
-	print_number(1024);
-	_putchar('\n');
-	print_number(0);
-	_putchar('\n');
-	print_number(-55);
-	_putchar('\n');
-	print_number(-11474836);
-	_putchar('\n');
+	char *n;
+	char *m;
+	char *res;
+	char r2[10];
+	char r3[11];
 
+	n = "999999999";
+	m = "1";
+	res = infinite_add(n, m, r2, 10);
+	if (res == 0)
+		printf("error\n");
+	else
+		printf("%s + %s = %s\n", n, m, res);
+
+	res = infinite_add(n, m, r3, 11);
+	if (res == 0)
+		printf("error\n");
+	else
+		printf("%s + %s = %s\n", n, m, res);
+
+	printf("%s + %s = %s\n", n, m, res);
 	return 0;
 }

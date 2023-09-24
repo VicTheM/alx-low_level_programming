@@ -1,8 +1,34 @@
 #include "main.h"
+/**
+ * shift_string - rotate string to the right by one bit
+ * @string: address of string
+ *
+ * Return: void
+ */
+void shift_string(char *string)
+{
+	char temp;
+	int ii = 0;
+
+	while (*string)
+	{
+		ii++;
+		string++;
+	}
+	string--;
+	temp = *string;
+	for ( ; ii > 1; ii--)
+	{
+		*string = *(string - 1);
+		string--;
+	}
+	*string = temp;
+}
 
 /**
  * rev_string - reverse array
  * @n: integer params
+ *
  * Return: 0
  */
 
@@ -20,7 +46,7 @@ void rev_string(char *n)
 
 	for (j = 0; j < i; j++)
 	{
-		ii--;
+		i--;
 		temp = *(n + j);
 		*(n + j) = *(n + i);
 		*(n + i) = temp;
@@ -75,6 +101,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	*(r + digits) = '\0';
 	rev_string(r);
+	shift_string(r);
 	return (r);
 }
 
