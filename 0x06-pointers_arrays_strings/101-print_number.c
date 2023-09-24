@@ -20,7 +20,6 @@ int get_pow(unsigned int n)
 	return (pow);
 }
 
-/**
  * _pow - raise a number to a power
  * @x: index
  * @y: power
@@ -38,12 +37,10 @@ unsigned int _pow(int x, int y)
 	}
 	return (power);
 }
-/**
  * print_number - Prints an integer.
  * @n: Integer
  *
  * Return: void
- */
 /*void print_number(int n)
 {
 	unsigned int number;
@@ -72,9 +69,8 @@ unsigned int _pow(int x, int y)
 		}
 		_putchar(number + '0');
 	}
-}*/
+}
 
-/**
  * print_number - Prints an integer.
  * @n: Integer
  *
