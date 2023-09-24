@@ -4,7 +4,7 @@
  * @n: integer to be tested;
  *
  * Return: power as int
- */
+ *
 int get_pow(unsigned int n)
 {
 	int pow;
@@ -26,7 +26,7 @@ int get_pow(unsigned int n)
  * @y: power
  *
  * Return: x raised to y as int
- */
+ *
 unsigned int _pow(int x, int y)
 {
 	unsigned int power = 1;
@@ -44,7 +44,7 @@ unsigned int _pow(int x, int y)
  *
  * Return: void
  */
-void print_number(int n)
+/*void print_number(int n)
 {
 	unsigned int number;
 	int power;
@@ -72,4 +72,28 @@ void print_number(int n)
 		}
 		_putchar(number + '0');
 	}
+}*/
+
+/**
+ * print_number - Prints an integer.
+ * @n: Integer
+ *
+ * Return: void
+ */
+void print_number(int n)
+{
+	unsigned int x;
+
+	if (n < 0)
+	{
+		putchar('-');
+		n *= -1;
+	}
+
+	x = n;
+
+	if (x / 10)
+		print_number(x / 10);
+
+	putchar(x % 10 + '0');
 }
