@@ -41,7 +41,7 @@ unsigned int _pow(int x, int y)
  * @n: Integer
  *
  * Return: void
-/*void print_number(int n)
+void print_number(int n)
 {
 	unsigned int number;
 	int power;
