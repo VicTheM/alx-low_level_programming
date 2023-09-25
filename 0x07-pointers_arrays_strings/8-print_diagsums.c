@@ -12,12 +12,15 @@ void print_diagsums(int *a, int size)
 {
 	unsigned int sum_leading = 0;
 	unsigned int sum_trailing = 0;
-	int ii, jj;
+	int ii = 0;
+	int jj = 0;
 
-	for (ii = 0; ii < size; ii++)
+	while (ii < (size * size))
 	{
-		sum_leading += a[ii][ii];
-		sum_trailing += a[size - 1 - ii][size - 1 - ii];
+		sum_leading += a[ii + jj];
+		sum_trailing += a[ii + size - 1 - jj];
+		ii += size;
+		jj++;
 	}
 	printf("%u, %u\n", sum_leading, sum_trailing);
 }
