@@ -10,7 +10,6 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int len = 0;
-	unsigned int ii = 0;
 	unsigned int jj;
 	char *source = accept;
 	char *ss = s;
@@ -23,7 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (*source == ss[jj])
 			{
 				if (jj > len)
-					len = jj;
+					len = jj + 1;
 				break;
 			}
 			jj++;

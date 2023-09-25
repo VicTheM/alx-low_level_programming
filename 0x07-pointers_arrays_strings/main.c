@@ -3,21 +3,6 @@
 
 void simple_print_buffer(char *buffer, unsigned int size);
 
-
-int main(void)
-{
-    char *s = "hello";
-    char *f;
-
-    f = _strchr(s, 'l');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
-    return (0);
-}
-
 /**
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
@@ -44,6 +29,17 @@ void simple_print_buffer(char *buffer, unsigned int size)
                 i++;
         }
         printf("\n");
+}
+
+int main(void)
+{
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
+
+    n = _strspn(s, f);
+    printf("%u\n", n);
+    return (0);
 }
 
 /**
