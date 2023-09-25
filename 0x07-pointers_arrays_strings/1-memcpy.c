@@ -18,5 +18,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	for (ii = 0; ii < n; ii++)
 		*s++ = buffer[ii];
 
-	return (0);
+	return (dest);
 }
