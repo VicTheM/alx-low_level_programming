@@ -10,14 +10,5 @@
  */
 void set_string(char **s, char *to)
 {
-	char *buffer = to;
-	char **bucket = s;
-
-	while (*buffer)
-	{
-		**bucket = *buffer;
-		bucket++;
-		buffer++;
-	}
-	**bucket = '\n';
+	*s = to;
 }
