@@ -31,5 +31,5 @@ char *_strstr(char *haystack, char *needle)
 				break;
 		}
 	}
-	return ('\0');
+	return ((void *)0);
 }
