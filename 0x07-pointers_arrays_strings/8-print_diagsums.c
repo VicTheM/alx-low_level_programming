@@ -12,8 +12,8 @@ void print_diagsums(int *a, int size)
 {
 	long sum_leading = 0;
 	long sum_trailing = 0;
-	int ii = 0;
-	int jj = 0;
+	unsigned int ii = 0;
+	unsigned int jj = 0;
 
 	while (ii < (size * size))
 	{
