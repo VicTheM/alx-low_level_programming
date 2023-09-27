@@ -10,26 +10,26 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *hay = haystack;
-	char *sch = needle;
-	unsigned long int ii;
-	unsigned long int k;
-	unsigned long int len = 0;
+	int a = 0, b = 0;
 
-	/* get size of ned */
-	while (hay[len] != '\0')
-		len++;
-	for (ii = 0; ii < len; ii++)
+	while (haystack[a])
 	{
-		k = 0;
-		while (sch[0] == hay[ii])
+		while (needle[b])
 		{
-			k++;
-			if (sch[k] == '\0')
-				return (&hay[ii]);
-			if (sch[k] != hay[ii + k])
+			if (haystack[a + b] != needle[b])
+			{
 				break;
+			}
+
+			b++;
 		}
+
+		if (needle[b] == '\0')
+		{
+			return (haystack + a);
+		}
+
+		a++;
 	}
-	return ((void *)0);
-}
+
+	return ('\0');
