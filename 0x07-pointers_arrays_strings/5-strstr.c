@@ -12,9 +12,9 @@ char *_strstr(char *haystack, char *needle)
 {
 	char *hay = haystack;
 	char *sch = needle;
-	unsigned int ii;
-	unsigned int k;
-	unsigned int len = 0;
+	unsigned long int ii;
+	unsigned long int k;
+	unsigned long int len = 0;
 
 	/* get size of ned */
 	while (hay[len] != '\0')
