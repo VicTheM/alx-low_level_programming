@@ -10,8 +10,8 @@
  */
 void print_diagsums(int *a, int size)
 {
-	unsigned long sum_leading = 0;
-	unsigned long sum_trailing = 0;
+	long sum_leading = 0;
+	long sum_trailing = 0;
 	int ii = 0;
 	int jj = 0;
 
@@ -22,5 +22,5 @@ void print_diagsums(int *a, int size)
 		ii += size;
 		jj++;
 	}
-	printf("%lu, %lu\n", sum_leading, sum_trailing);
+	printf("%ld, %ld\n", sum_leading, sum_trailing);
 }
