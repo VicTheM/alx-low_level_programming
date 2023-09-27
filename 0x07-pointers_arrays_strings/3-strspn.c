@@ -9,26 +9,24 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned long int len = 0;
-	unsigned long int jj;
-	char *source = accept;
-	char *ss = s;
+	unsigned int a = 0, b, t = 0;
 
-	while (*source)
+	while (accept[a])
 	{
-		jj = 0;
-		while (ss[jj] != '\n')
+		b = 0;
+
+		while (s[b] != 32)
 		{
-			if (*source == ss[jj])
+			if (accept[a] == s[b])
 			{
-				if (jj > len)
-					len = jj + 1;
-				break;
+				t++;
 			}
-			jj++;
+
+			b++;
 		}
-		source++;
+
+		a++;
 	}
 
-	return (len);
+	return (t);
 }
