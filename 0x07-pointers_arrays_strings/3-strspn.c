@@ -9,8 +9,8 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int len = 0;
-	unsigned int jj;
+	unsigned long int len = 0;
+	unsigned long int jj;
 	char *source = accept;
 	char *ss = s;
 
