@@ -2,7 +2,7 @@
 
 /**
  * print_diagsums - prints sum of matrix diagonals
- * @a: pointer to 2 X 2 matrix
+ * @a: pointer to square matrix
  * @size: size of one dimension of square matrix
  *
  * Return: void
@@ -10,8 +10,8 @@
  */
 void print_diagsums(int *a, int size)
 {
-	unsigned int sum_leading = 0;
-	unsigned int sum_trailing = 0;
+	unsigned long sum_leading = 0;
+	unsigned long sum_trailing = 0;
 	int ii = 0;
 	int jj = 0;
 
@@ -22,5 +22,5 @@ void print_diagsums(int *a, int size)
 		ii += size;
 		jj++;
 	}
-	printf("%u, %u\n", sum_leading, sum_trailing);
+	printf("%lu, %lu\n", sum_leading, sum_trailing);
 }

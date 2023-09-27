@@ -1,15 +1,14 @@
 #include "main.h"
 #include <stdio.h>
-
+/*
 void simple_print_buffer(char *buffer, unsigned int size);
 
-/**
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
  * @size: the size of the memory to print
  *
  * Return: Nothing.
- */
+
 void simple_print_buffer(char *buffer, unsigned int size)
 {
         unsigned int i;
@@ -30,7 +29,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
         }
         printf("\n");
 }
-/*
+
 int main(void)
 {
     char *s = "hello, world";
@@ -45,16 +44,22 @@ int main(void)
  * main - check the code
  *
  * Return: Always 0.
- *
+ */
+
+
 int main(void)
 {
-    char *s = "hello, world";
+    char *s = "hello, wold my_world! yeah!";
     char *f = "world";
     char *t;
 
     t = _strstr(s, f);
     printf("%s\n", t);
     return (0);
+}
+/*
+
+
 int main(void)
 {
     int c3[3][3] = {
@@ -72,7 +77,9 @@ int main(void)
     print_diagsums((int *)c3, 3);
     print_diagsums((int *)c5, 5);
     return (0);
-}*/
+}
+
+
 int main(void)
 {
     char board[8][8] = {
@@ -88,3 +95,4 @@ int main(void)
     print_chessboard(board);
     return (0);
 }
+*/
