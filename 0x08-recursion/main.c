@@ -6,14 +6,15 @@ int main(void)
     _puts_recursion("Puts with recursion");
     return (0);
 }
-*/
-/*
+
+
+
 int main(void)
 {
     _print_rev_recursion("\nColton Walker");
     return (0);
 }
-*/
+
 int main(void)
 {
     int r;
@@ -29,7 +30,7 @@ int main(void)
     return (0);
 }
 
-
+*/
 
 
 int main(void)
@@ -51,7 +52,7 @@ int main(void)
     return (0);
 }
 
-
+/*
 
 int main(void)
 {
@@ -147,7 +148,6 @@ int main(void)
     return (0);
 }
 
-
 int main(void)
 {
     int n;
@@ -156,3 +156,4 @@ int main(void)
     printf("%d\n", n);
     return (0);
 }
+*/
