@@ -10,8 +10,6 @@
  */
 int prime_helper(int subject, int divisor)
 {
-	if (divisor < 0)
-		divisor *= -1;
 	if (divisor == 0)
 		return (0);
 	if (divisor == 1)
@@ -29,10 +27,9 @@ int prime_helper(int subject, int divisor)
  */
 int is_prime_number(int n)
 {
-	if (n == 0)
+	if (n == -1 || n == 0 || n == 1)
 		return (0);
-	if (n < 0)
-		return (prime_helper(-n, n + 1));
-	else
-		return (prime_helper(n, n - 1));
+	if (n < -1)
+		n *= -1;
+	return (prime_helper(n, n - 1));
 }
