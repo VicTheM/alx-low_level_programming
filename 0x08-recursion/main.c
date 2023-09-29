@@ -52,7 +52,6 @@ int main(void)
     return (0);
 }
 
-*/
 
 int main(void)
 {
@@ -73,7 +72,6 @@ int main(void)
     return (0);
 }
 
-/*
 
 
 int main(void)
@@ -99,6 +97,7 @@ int main(void)
     return (0);
 }
 
+*/
 
 int main(void)
 {
@@ -112,10 +111,11 @@ int main(void)
     printf("%d\n", r);
     r = is_palindrome("step on no pets");
     printf("%d\n", r);
+
     return (0);
 }
 
-
+/*
 
 int main(void)
 {
