@@ -1,5 +1,5 @@
 #include "main.h"
-/** 
+/**
  * wildcmp - Compare two strings allowing for wildcard char
  * @s1: static string
  * @s2: String that can take *
