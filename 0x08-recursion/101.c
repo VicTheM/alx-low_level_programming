@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * first_char - finds char in string
  * @k: the char to search for
@@ -7,7 +8,6 @@
  * causes s to point to k in @s else null
  * at end of @S
  *
- * Return: char pointer to @k in @s of NULL
  */
 char *first_char(char k, char *s)
 {
@@ -18,23 +18,12 @@ char *first_char(char k, char *s)
 	return (first_char(k, s + 1));
 }
 
-/**
- * last_char - points to the last occurence of @k in @s
- * *k: character to search for
- * @s: pointer to string to search in
- * Description: searches for @k in @s and causes s to point
- * to the last occurence of @k in @s else s points to
- * NULL at end of @s
- *
- * Return: char pointer to @k in @s or Null
- */
 
 /**
  * jump_asterik - moves pointer to just after asterik
  * @s: pointer to asterik
  * Description: sets @s to after asterik
  *
- * Return: first char after * or Null at ind of @s
  */
 char *jump_asterik(char *s)
 {
@@ -42,6 +31,7 @@ char *jump_asterik(char *s)
 		return (s);
 	return (jump_asterik(s + 1));
 }
+
 
 /**
  * wildcmp - compares two strings
@@ -69,13 +59,16 @@ int wildcmp(char *s1, char *s2)
 	if (*s2 == '*')
 	{
 		s2 = jump_asterik(s2);
+		printf("s2 after jump ast: %s\n", s2);
 		if (*s2 == '\0')
 			return (1);
-		s1 = first_char(s2[0], s1
-				);
+		s1 = first_char(s2[0], s1);
+		printf("s1 is: %s\n", s1);
 		if (*s1 == '\0')
 			return (0);
 		return (wildcmp(s1, s2));
 	}
-	return (1);
+	/* this code will never be executed */
+	*s1 = *s2;
+	return (5);
 }
