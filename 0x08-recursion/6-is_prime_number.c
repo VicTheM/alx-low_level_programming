@@ -10,8 +10,6 @@
  */
 int prime_helper(int subject, int divisor)
 {
-	if (divisor == 0)
-		return (0);
 	if (divisor == 1)
 		return (1);
 	if (subject % divisor == 0)
