@@ -119,8 +119,7 @@ int main(void)
 
 int main(void)
 {
-    int r;
-
+	int r;
     r = wildcmp("main.c", "*.c");
     printf("%d\n", r);
     r = wildcmp("main.c", "m*a*i*n*.*c*");
@@ -139,8 +138,8 @@ int main(void)
     printf("%d\n", r);
     r = wildcmp("main.c", "**.*c");
     printf("%d\n", r);
-    r = wildcmp("main-main.c", "ma*in.c");
-    printf("%d\n", r);
+	r = wildcmp("main-mainwrongin.c", "ma*in.c");
+	printf("%d\n", r);
     r = wildcmp("main", "main*d");
     printf("%d\n", r);
     r = wildcmp("abc", "*b");
