@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
-
+/**
+ * create_array - creates an array of char
+ * @size: num of chas in array
+ * @c: fill element
+ *
+ * Return: pointer to the created array
+ */
 
 char *create_array(unsigned int size, char c)
 {
