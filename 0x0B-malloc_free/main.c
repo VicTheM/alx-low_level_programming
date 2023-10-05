@@ -9,7 +9,7 @@ int main(void)
 {
     char *s;
 
-    s = _strdup("");
+    s = _strdup("alx se");
     if (s == NULL)
     {
         printf("failed to allocate memory\n");
