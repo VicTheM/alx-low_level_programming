@@ -27,14 +27,11 @@ char *str_concat(char *s1, char *s2)
 	new_str = (char *)malloc(sizeof(char) * (len_1 + len_2 + 1));
 	if (new_str == NULL)
 		return (NULL);
-	else
-	{
-		for (counter = 0; counter < len_1; counter++)
-			new_str[counter] = s1[counter];
-		counter = 0;
-		for (counter = 0; counter < len_2; counter++)
-			new_str[len_1 + counter] = s2[counter];
-	}
+	for (counter = 0; counter < len_1; counter++)
+		new_str[counter] = s1[counter];
+	counter = 0;
+	for (counter = 0; counter < len_2; counter++)
+		new_str[len_1 + counter] = s2[counter];
 	new_str[len_1 + len_2] = '\0';
 	return (new_str);
 }
