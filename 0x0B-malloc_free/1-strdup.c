@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 /**
  * _strdup - duplicates a string to a new mwmory
  * @str: string to be duplicated
@@ -41,13 +42,18 @@ char *_strdup(char *str)
 		return (NULL);
 
 	len = strlen(str);
-	s = (char *)malloc(sizeof(char) * (len + 1));
+	printf("len: %d\n", len);
+	s = malloc(sizeof(char) * (len + 1));
 	if (s == NULL)
 		return (NULL);
+	if (s[2] == 0)
+		printf("true\n");
 	while (str[i] != '\0')
 	{
+		printf("s[%d] = %c\n", i, str[i]);
 		s[i] = str[i];
 		i++;
 	}
+	printf("%s\n", s);
 	return (s);
 }
