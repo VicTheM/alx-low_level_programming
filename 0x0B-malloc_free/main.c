@@ -4,7 +4,7 @@
 /**in - check the code for ALX School students.
  *
  * Return: Always 0.
- */
+ 
 int main(void)
 {
     char *s;
@@ -19,6 +19,8 @@ int main(void)
     free(s);
     return (0);
 }
+*/
+
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -70,4 +72,17 @@ int main(void)
 */
 
 
+int main(void)
+{
+    char *s;
 
+    s = str_concat("Betty ", "Holberton");
+    if (s == NULL)
+    {
+        printf("failed\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+    return (0);
+}
