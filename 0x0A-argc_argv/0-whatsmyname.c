@@ -2,7 +2,7 @@
 /**
  * main - prints out the name of the executable
  * @argc: numbwr of command line arguments
- * @argv: array of pointers to strings 
+ * @argv: array of pointers to strings
  *
  * Return: 0 Success
  */
