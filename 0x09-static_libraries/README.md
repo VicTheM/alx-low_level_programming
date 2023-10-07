@@ -1,4 +1,1 @@
-# The scripts in this folder demonstrates the creation
-# and use of static libraries
-
-to be updated later
+0x09-static_libraries
