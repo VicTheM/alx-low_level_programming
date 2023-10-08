@@ -1,7 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-
+/**
+ * _realloc - mimics realloc
+ * @ptr: pointer to old memory
+ * @old_size: old mem size
+ * @new_size: new mem size
+ *
+ * Return: pointer to new mem
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int min_size;
