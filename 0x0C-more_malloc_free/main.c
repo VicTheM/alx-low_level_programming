@@ -74,7 +74,6 @@ int main(void)
 
 */
 
-/* /
 int main(void)
 {
     char *concat;
@@ -84,10 +83,8 @@ int main(void)
     free(concat);
     return (0);
 }
-*
 
-
-*/
+/*
 
 
 int main(void)
@@ -111,3 +108,5 @@ int main(void)
     free(d);
     return (0);
 }
+
+*/
