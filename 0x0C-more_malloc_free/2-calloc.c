@@ -1,7 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * _calloc - mimics the calloc() function
+ * @nmemb: number of elements
+ * @size: size of each element
+ *
+ * Return: pointr to array or NULL
+ */
 
-void *_calloc(unsigned nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
 	unsigned int c;
