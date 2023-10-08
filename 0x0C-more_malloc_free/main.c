@@ -25,7 +25,6 @@ void simple_print_buffer(char *buffer, unsigned int size)
     printf("\n");
 }
 
-/* ////
 int main(void)
 {
     char *p;
@@ -42,7 +41,7 @@ int main(void)
     free(p);
     return (0);
 }
-*/
+/*
 
 int main(void)
 {
@@ -54,7 +53,6 @@ int main(void)
     return (0);
 }
 
-/*
 int main(void)
 {
     char *a;
