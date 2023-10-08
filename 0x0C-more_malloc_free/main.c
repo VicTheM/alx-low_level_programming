@@ -1,4 +1,4 @@
-iinclude "main.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -44,7 +44,6 @@ int main(void)
 }
 */
 
-/* ///
 int main(void)
 {
     int *a;
@@ -55,8 +54,7 @@ int main(void)
     return (0);
 }
 
-*/
-
+/*
 int main(void)
 {
     char *a;
@@ -69,7 +67,6 @@ int main(void)
     free(a);
     return (0);
 }
-/*
 
 int main(void)
 {
