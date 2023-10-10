@@ -1,5 +1,6 @@
 #ifndef _DOG_H_
 #define _DOG_H_
+
 /**
  * struct dog - models a dog
  * @name: char * that holds name of dog
@@ -14,5 +15,7 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /* _DOG_H_ */
