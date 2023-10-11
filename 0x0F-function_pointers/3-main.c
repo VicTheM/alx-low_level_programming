@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - the main func
+ * @argc: num of args
+ * @argv: array of pointerss to args
+ *
+ * Return: int signifying exit status
+ */
 int main(int argc, char *argv[])
 {
 	int op1, op2, result;
@@ -14,7 +21,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && (argv[3][0] == '0'))
 	{
 		printf("Error\n");
 		exit(100);
