@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * print_numbers - Print n amount of numbers, separated by the separator string
+ * print_strings - Print n amount of numbers, separated by the separator string
  * @separator: The string to pring between numbers
  * @n: Number of numbers to print
  */
