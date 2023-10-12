@@ -14,17 +14,14 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	int buffer;
 	unsigned int c;
 
-	if (n > 0)
+	va_start(ap, n);
+	if (seperator == NULL)
+		seperator = "";
+	for (c = 0; c < n - 1; c++)
 	{
-		va_start(ap, n);
-		if (seperator == NULL)
-			seperator = "";
-		for (c = 0; c < n - 1; c++)
-		{
-			buffer = va_arg(ap, int);
-			printf("%d%s", buffer, seperator);
-		}
-		printf("%d\n", va_arg(ap, int));
+		buffer = va_arg(ap, int);
+		printf("%d%s", buffer, seperator);
 	}
+	printf("%d\n", va_arg(ap, int));
 	va_end(ap);
 }
