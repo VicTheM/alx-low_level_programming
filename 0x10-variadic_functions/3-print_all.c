@@ -18,7 +18,7 @@ void print_all(const char *const format, ...)
 	{
 		if (*(format + 1 + c) == '\0')
 		{
-			del[0] = '\n';
+			del[0] = '\0';
 			del[1] = '\0';
 		}
 		switch (*(format + c))
@@ -36,7 +36,7 @@ void print_all(const char *const format, ...)
 				str = va_arg(inputs, char *);
 				if (str == NULL)
 				{
-					printf("(nil)");
+					printf("(nil)%s", del);
 					break;
 				}
 				printf("%s%s", str, del);
@@ -44,5 +44,6 @@ void print_all(const char *const format, ...)
 		}
 		c++;
 	}
+	printf("\n");
 	va_end(inputs);
 }
