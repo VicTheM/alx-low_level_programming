@@ -15,7 +15,7 @@ void print_all(const char *const format, ...)
 	va_start(inputs, format);
 	while (*(format + c))
 	{
-		if (*(format + 1) == '\0')
+		if (*(format + 1 + c) == '\0')
 			del[0] = '\0';
 		switch (*(format + c))
 		{
