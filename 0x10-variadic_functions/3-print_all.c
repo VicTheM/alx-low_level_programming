@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * print_all - prints data of tuype chat, int, float and string
  * @format: connstant pointer to constant character
