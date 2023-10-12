@@ -7,7 +7,7 @@
  *
  * Return: the summ of all varargs
  */
-int sum_them_all(const unsigned int n, ...);
+int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
 	int sum;
@@ -17,7 +17,7 @@ int sum_them_all(const unsigned int n, ...);
 		return (0);
 
 	va_start(ap, n);
-	sum = 0
+	sum = 0;
 	for (c = 0; c < n; c++)
 		sum += va_arg(ap, int);
 	va_end(ap);
