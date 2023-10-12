@@ -17,7 +17,10 @@ void print_all(const char *const format, ...)
 	while (format != NULL && format[c] != '\0')
 	{
 		if (*(format + 1 + c) == '\0')
-			del[0] = '\0';
+		{
+			del[0] = '\n';
+			del[1] = '\0';
+		}
 		switch (*(format + c))
 		{
 			case 'c':
@@ -42,5 +45,4 @@ void print_all(const char *const format, ...)
 		c++;
 	}
 	va_end(inputs);
-	printf("\n");
 }
