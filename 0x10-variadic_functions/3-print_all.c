@@ -13,7 +13,7 @@ void print_all(const char *const format, ...)
 	char *str;
 
 	va_start(inputs, format);
-	while (*(format + c))
+	while (format != NULL && format[c] != '\0')
 	{
 		if (*(format + 1 + c) == '\0')
 			del[0] = '\0';
