@@ -12,9 +12,11 @@ size_t print_list(const list_t *h)
 {
 	const list_t *header = h;
 	size_t nodes;
-	short flag = 1;
+	int flag = 1;
 
 	nodes = 0;
+	if (h == NULL)
+		return (0);
 	while (flag)
 	{
 		if (header->next == NULL)
@@ -27,6 +29,5 @@ size_t print_list(const list_t *h)
 
 		header = header->next;
 	}
-
 	return (nodes);
 }
