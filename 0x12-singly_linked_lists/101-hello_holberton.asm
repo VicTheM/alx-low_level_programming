@@ -1,18 +1,17 @@
 ; My first assembly code ever!
 
-section .data
-msg db 'Hello, Holberton', 10
+global main
+extern printf
 
-
-section .text
-	global main
+	section .text
 main:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, text
-	mov rdx, 17
-	syscall
-
-	mov rax, 60
-	mov rdi, 0
-	syscall
+	push rbp
+	mov rdi, format
+	mov rsi, message
+	mov rax, 0
+	call printf
+	pop rbp
+	mov rax, 0
+	ret
+message: db "Hello, Holberton", 0
+format:	db "%s", 10, 0
