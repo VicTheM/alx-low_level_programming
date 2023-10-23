@@ -6,9 +6,9 @@
 void __attribute__((constructor)) display(void)
 {
 	char *ptr;
-	char str[100] = "You're beat!, and yet, you must allow,\n";
+	char str[100] = "You're beat! and yet, you must allow,\n";
 
-	ptr = str + 41;
+	ptr = str + 40;
 	ptr = "I bore my house upon my back!\n";
 	printf("%s%s", str, ptr);
 }
