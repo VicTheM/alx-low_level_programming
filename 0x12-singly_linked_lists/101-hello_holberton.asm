@@ -1,17 +1,14 @@
 ; My first assembly code ever!
 
 section .data
-msg db 'Hello, Holberton', 0xa ;my string
-len equ $ - msg
+msg db 'Hello, Holberton', 10
 
 
 section .text
 	global main
 main:
-	mov edx, len
-	mov ecx, msg
-	mov ebx, 1
-	mov eax, 4
-	int 0x80
-	mov eax, 1
-	int 0x80
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, text
+	mov rdx, 17
+	syscall
