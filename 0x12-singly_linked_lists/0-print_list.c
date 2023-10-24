@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "lists.h"
-#include <stdlib.h>
 
 /**
  * print_list - print all data in a linked list
