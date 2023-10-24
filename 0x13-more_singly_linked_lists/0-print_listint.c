@@ -1,7 +1,6 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
+/* stdlib & stdio snipped off because of betty */
 /**
  * print_listint - prints a listy element innt
  * @h: head pointer
