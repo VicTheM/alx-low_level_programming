@@ -1,6 +1,10 @@
 #include "3-calc.h"
 #include <stdlib.h>
-
+/**
+ * get_op_func - function that receives pointer to char
+ *
+ * Return: pointer to function that receives two int and return int
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {

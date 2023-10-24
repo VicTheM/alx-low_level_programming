@@ -1,5 +1,8 @@
 #include "main.h"
 #include <math.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_number - Prints an integer.
@@ -15,12 +18,12 @@ void print_number(int n)
 
 	if (d < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		d *= -1;
 	}
 
 	if (d == 0)
-		_putchar('0');
+		putchar('0');
 
 	while (1)
 	{
@@ -45,7 +48,20 @@ void print_number(int n)
 				t *= 10;
 			}
 
-			_putchar((d / t) % 10 + '0');
+			putchar((d / t) % 10 + '0');
 			p--;
 		}
+}
+
+int main(int argc, char *argv[])
+{
+	int num = 0;
+	int c = 0;
+	for (c = 1; c < argc; c++)
+	{
+		num = atoi(argv[c - 1]);
+		print_number(num);
+		printf("\n");
+	}
+	return (0);
 }

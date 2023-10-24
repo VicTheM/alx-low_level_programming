@@ -4,7 +4,7 @@
 
 /**
  * struct list_s - singly linked list
- * @tr: string - (malloc'ed string)
+ * @str: string - (malloc'ed string)
  * @len: lenngth of string
  * @next: points to the next node
  *
