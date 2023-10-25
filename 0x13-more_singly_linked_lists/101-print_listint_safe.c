@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	n_nodes = 0;
 	if (!head)
-		exit(98);
+		return (0);
 	nex = loop = head;
 	while (nex)
 	{
