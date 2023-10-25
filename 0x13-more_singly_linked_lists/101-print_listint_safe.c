@@ -1,5 +1,48 @@
 #include "lists.h"
 
+
+size_t d(const listint_t *nex)
+{
+	int n_nodes = 0;
+	const  listint_t *loop = nex;
+
+	while (nex)
+	{
+		if (loop < nex) /* cmp memory locations */
+		{
+			printf("-> [%p] %d\n", (void *)nex, nex->n);
+			return (n_nodes);
+		}
+		n_nodes++;
+		printf("[%p] %d\n", (void *)nex, nex->n);
+		loop = nex;
+		nex = nex->next;
+	}
+	return (n_nodes);
+}
+
+size_t a(const listint_t *nex)
+{
+	int n_nodes = 0;
+	const listint_t *loop = nex;
+
+	while (nex)
+	{
+		if (loop > nex) /* cmp memory locations */
+		{
+			printf("-> [%p] %d\n", (void *)nex, nex->n);
+			return (n_nodes);
+		}
+		n_nodes++;
+		printf("[%p] %d\n", (void *)nex, nex->n);
+		loop = nex;
+		nex = nex->next;
+	}
+	return (n_nodes);
+}
+
+
+
 /**
  * print_listint_safe - prints a listy element innt
  * @head: head pointer
@@ -8,38 +51,43 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	unsigned int c, i;
 	size_t n_nodes;
 	const listint_t *nex;
-	const listint_t **loop = malloc(sizeof(listint_t *) * 50);
+	const listint_t *loop;
+	char order = 'z';
 
-	c = 0;
-	if (loop == NULL)
-		exit(98);
 	n_nodes = 0;
 	if (!head)
 		return (0);
+	nex = loop = head;
+	if (nex->next != NULL && nex->next < nex)
+		order = 'd';
+	else if (nex->next != NULL && nex->next > nex)
+		order = 'a';
+	else if (nex->next != NULL && nex->next == nex)
+		order = 's';
 
-	loop[c] = NULL;
-	c++;
-	nex = head;
-	while (nex)
+	switch (order)
 	{
-		for (i = 1; i < c; i++) /* cmp memory locations */
-		{
-			if (nex == loop[i])
+		case 'a':
+			n_nodes = a(nex);
+			break;
+		case 'd':
+			n_nodes = d(nex);
+			break;
+		case 's':
+			n_nodes = 1;
+			printf("[%p] %d\n", (void *)nex, nex->n);
+			break;
+		default:
+			while (nex)
 			{
-				printf("-> [%p] %d\n", (void *)nex, nex->n);
-				return (n_nodes);
+				n_nodes++;
+				printf("[%p] %d\n", (void *)nex, nex->n);
+				nex = nex->next;
 			}
-		}
-		n_nodes++;
-		printf("[%p] %d\n", (void *)nex, nex->n);
-		loop[c] = nex;
-		c++;
-		nex = nex->next;
 	}
-
-	free(loop);
 	return (n_nodes);
 }
+
+
