@@ -1,47 +1,59 @@
 #include "lists.h"
-
-
-size_t d(const listint_t *nex)
+#ifndef _D_
+#define _D_
+/**
+ * ddd - descending
+ * @nex: list pointer
+ *
+ * Return: nodes;
+ */
+size_t ddd(const listint_t **nex)
 {
 	int n_nodes = 0;
-	const  listint_t *loop = nex;
+	const  listint_t *loop = *nex;
 
-	while (nex)
+	while (*nex)
 	{
-		if (loop < nex) /* cmp memory locations */
+		if (loop < *nex) /* cmp memory locations */
 		{
-			printf("-> [%p] %d\n", (void *)nex, nex->n);
+			printf("-> [%p] %d\n", (void *)*nex, (*nex)->n);
 			return (n_nodes);
 		}
 		n_nodes++;
-		printf("[%p] %d\n", (void *)nex, nex->n);
-		loop = nex;
-		nex = nex->next;
+		printf("[%p] %d\n", (void *)*nex, (*nex)->n);
+		loop = *nex;
+		*nex = (*nex)->next;
 	}
 	return (n_nodes);
 }
 
-size_t a(const listint_t *nex)
+/**
+ * aaa - ascending
+ * @nex: list pointer
+ *
+ * Return: nodes
+ */
+size_t aaa(const listint_t **nex)
 {
 	int n_nodes = 0;
-	const listint_t *loop = nex;
+	const listint_t *loop = *nex;
 
-	while (nex)
+	while (*nex)
 	{
-		if (loop > nex) /* cmp memory locations */
+		if (loop > *nex) /* cmp memory locations */
 		{
-			printf("-> [%p] %d\n", (void *)nex, nex->n);
+			printf("-> [%p] %d\n", (void *)*nex, (*nex)->n);
 			return (n_nodes);
 		}
 		n_nodes++;
-		printf("[%p] %d\n", (void *)nex, nex->n);
-		loop = nex;
-		nex = nex->next;
+		printf("[%p] %d\n", (void *)*nex, (*nex)->n);
+		loop = *nex;
+		*nex = (*nex)->next;
 	}
 	return (n_nodes);
 }
 
-
+#endif /* _D_ */
 
 /**
  * print_listint_safe - prints a listy element innt
@@ -70,10 +82,10 @@ size_t print_listint_safe(const listint_t *head)
 	switch (order)
 	{
 		case 'a':
-			n_nodes = a(nex);
+			n_nodes = aaa(&nex);
 			break;
 		case 'd':
-			n_nodes = d(nex);
+			n_nodes = ddd(&nex);
 			break;
 		case 's':
 			n_nodes = 1;
