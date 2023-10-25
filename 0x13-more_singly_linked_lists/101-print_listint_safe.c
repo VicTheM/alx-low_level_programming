@@ -1,33 +1,39 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a listy element innt
- * @head: head pointer
+ * print_listint_safe - Prints a listint_t linked list.
+ * @head: Head pointer to the listint_t list
  *
- * Return: number of nodes in list
+ * Return: The number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t n_nodes;
-	const listint_t *nex;
-	const listint_t *loop;
+	const listint_t *slow, *fast;
+	size_t num = 0;
 
-	n_nodes = 0;
 	if (!head)
-		return (0);
-	nex = loop = head;
-	while (nex)
-	{
-		if (loop < nex) /* cmp memory locations */
-		{
-			printf("-> [%p] %d\n", (void *)nex, nex->n);
-			return (n_nodes);
-		}
-		n_nodes++;
-		printf("[%p] %d\n", (void *)nex, nex->n);
-		loop = nex;
-		nex = nex->next;
-	}
+		exit(98);
 
-	return (n_nodes);
+	slow = head;
+	fast = head;
+	num++;
+	while (slow->next)
+	{
+		printf("[%p] %d\n", (void *)slow, slow->n);
+		slow = slow->next;
+		if (fast && fast->next->next)
+			fast = fast->next->next;
+		else
+			fast = NULL;
+		if (slow == fast)
+		{
+			printf("[%p] %d\n", (void *)fast, fast->n);
+			printf("[%p] %d\n", (void *)fast->next, fast->next->n);
+			printf("->[%p] %d\n", (void *)fast->next->next, fast->next->next->n);
+			exit(98);
+		}
+		num++;
+	}
+	printf("[%p] %d\n", (void *)slow, slow->n);
+	return (num);
 }
