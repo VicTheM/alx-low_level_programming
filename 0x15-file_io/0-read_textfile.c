@@ -16,20 +16,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buf[1024];
+	char *buf;
 	int fhandle;
-	ssize_t ret_val = -1;
+	ssize_t ret_val, n;
 
+	ret_val = n = -1;
 	fhandle = open(filename, O_RDONLY);
 	if (filename == NULL || fhandle < 0)
 		return (0);
 
-	ret_val = read(fhandle, buf, letters);
-	close(fhandle);
-	if (ret_val < 0)
+	buf = malloc(sizeof(char) * letters);
+	if (!buf)
 		return (0);
-	ret_val = write(STDOUT_FILENO, buf, ret_val);
-	if (ret_val < 0)
+	n = read(fhandle, buf, letters);
+	close(fhandle);
+	if (n < 0)
+	{
+		free(buf);
+		return (0);
+	}
+	ret_val = write(STDOUT_FILENO, buf, n);
+	free(buf);
+	if (ret_val < 0 || ret_val != n)
 		return (0);
 	return (ret_val);
 }
