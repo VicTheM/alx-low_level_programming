@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <strings.h>
+#include <string.h>
 #include <stdio.h>
 
 /**
