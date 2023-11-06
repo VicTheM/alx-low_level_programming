@@ -1,22 +1,41 @@
-#include "main.h"
 #include <string.h>
+#include "main.h"
 #include <unistd.h>
 #include <fcntl.h>
 
+/**
+ * append_text_to_file - ...
+ * @filename: name of file
+ * @text_constant: text to append
+ *
+ * Return: 1 - success, -1 - failure
+ */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, n;
+	int fd, n, k, j;
 
-	if (!filename)
+	fd = -1;
+	if (filename == NULL)
 		return (-1);
+
 	fd = open(filename, O_APPEND | O_WRONLY);
-	if (fd < 0)
+	if (fd == -1)
 		return (-1);
-	if (text_content)
+
+	if (text_content == NULL)
 	{
-		n = write(fd, text_content, strlen(text_content));
-		if (n < 0)
-			return (-1);
+		close(fd);
+		return (-1);
 	}
+
+	k = strlen(text_content);
+	n = write(fd, text_content, k);
+	if (n == -1)
+		return (-1);
+
+	j = close(fd);
+	if (j == -1)
+		return (-1);
 	return (1);
 }
