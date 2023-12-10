@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdint.h>
 #include <limits.h>
 #include "main.h"
@@ -20,6 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t ret_val, n;
 
 	ret_val = n = -1;
+/*	fhandle = 0; */
 	fhandle = open(filename, O_RDONLY);
 	if (filename == NULL || fhandle < 0)
 		return (0);
@@ -29,6 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	n = read(fhandle, buf, letters);
 	close(fhandle);
+	printf("read return: %li\n", n);
 	if (n < 0)
 	{
 		free(buf);
@@ -39,4 +42,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (ret_val < 0 || ret_val != n)
 		return (0);
 	return (ret_val);
+}
+
+int main(void)
+{
+	read_textfile("Hello", 20);
+	return (0);
 }
