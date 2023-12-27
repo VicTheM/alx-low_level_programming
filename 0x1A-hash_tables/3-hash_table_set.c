@@ -56,7 +56,7 @@ int hash_table_set(hash_table_t *ht,
 	unsigned long int index;
 	short int boolean = 1;
 
-	if (key == NULL || strlen(key) < 1 || value == NULL)
+	if (key == NULL || ht == NULL || strlen(key) < 1 || value == NULL)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
