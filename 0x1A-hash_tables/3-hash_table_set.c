@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 
-/* IF TEST FAILS, REJECT DUPLICATE KEYS */
+/* IF TEST FAILS, ACCEPT DUPLICATE KEYS */
 
 /**
  * hash_node_create - creates a hash node item;
@@ -50,13 +50,33 @@ hash_node_t *hash_node_create(hash_node_t *head, const char *key, const char *va
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *hn;
+	hash_node_t *hn, *temp, *store;
 	unsigned long int index;
+	short int boolean = 1;
 
 	if (key == NULL || strlen(key) < 1 || value == NULL)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
+
+	/* check and replace duplicate keys */
+	if (ht->array[index] != NULL)
+	{
+		temp = ht->array[index];
+		do
+		{
+			store = temp;
+			boolean = strcmp(key, temp->key);
+			temp = temp->next;
+		} while (temp != NULL && boolean != 0);
+		
+		if (boolean == 0)
+		{
+			strcpy(store->value, value);
+			return (0);
+		}
+	}
+
 	hn = hash_node_create(ht->array[index], key, value);
 	if (hn == NULL)
 		return (0);
