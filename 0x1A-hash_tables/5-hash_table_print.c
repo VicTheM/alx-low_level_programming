@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * hash_table_print - prints in dicttionary format
+ * @ht: pointer to hash table
+ */
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *node;
@@ -22,16 +26,15 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			printf(", ");
 		}
-	
+
 		if (first == 1)
 		{
 			first = 0;
 		}
 
-		do
-		{
+		do {
 			printf("'%s': '%s'", node->key, node->value);
-			
+
 			node = node->next;
 			if (node != NULL)
 				printf(", ");

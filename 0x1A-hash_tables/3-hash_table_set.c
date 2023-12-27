@@ -15,7 +15,8 @@
  *
  * Return: pointer to the created node
  */
-hash_node_t *hash_node_create(hash_node_t *head, const char *key, const char *value)
+hash_node_t *hash_node_create(hash_node_t *head,
+		const char *key, const char *value)
 {
 	hash_node_t *hn;
 
@@ -28,14 +29,14 @@ hash_node_t *hash_node_create(hash_node_t *head, const char *key, const char *va
 
 	hn->key = strdup(key); /* Does strdup() fail? */
 	hn->value = strdup(value); /*Two unfreed mem created */
-	
+
 	if (head == NULL)
 	{
 		hn->next = NULL;
 		return (hn);
 	}
 	hn->next = head;
-	
+
 	return (hn);
 }
 
@@ -46,9 +47,10 @@ hash_node_t *hash_node_create(hash_node_t *head, const char *key, const char *va
  * @key: lookup/access key
  * @value: the data
  *
- * Return; 1 Success, 0 Failure
+ * Return: 1 Success, 0 Failure
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+int hash_table_set(hash_table_t *ht,
+	       const char *key, const char *value)
 {
 	hash_node_t *hn, *temp, *store;
 	unsigned long int index;
@@ -63,13 +65,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] != NULL)
 	{
 		temp = ht->array[index];
-		do
-		{
+		do {
 			store = temp;
 			boolean = strcmp(key, temp->key);
 			temp = temp->next;
 		} while (temp != NULL && boolean != 0);
-		
+
 		if (boolean == 0)
 		{
 			strcpy(store->value, value);
