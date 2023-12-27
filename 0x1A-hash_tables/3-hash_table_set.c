@@ -1,6 +1,8 @@
 #include "main.h"
 #include <string.h>
 
+/* IF TEST FAILS, REJECT DUPLICATE KEYS */
+
 /**
  * hash_node_create - creates a hash node item;
  * @head: incase of collision
