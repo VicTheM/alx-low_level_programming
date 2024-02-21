@@ -1,0 +1,12 @@
+# includes variables
+
+CC := gcc
+SRC := $(wildcard *.c)
+OBJ := %.o
+NAME := school
+
+all: main.o school.o
+	${CC} ${wildcard *.o} -o ${NAME}
+
+${OBJ}: %.c
+	${CC} -c -o $@ $<
