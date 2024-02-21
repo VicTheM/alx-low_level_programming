@@ -1,8 +1,8 @@
 # includes variables
 .PHONY: all clean oclean fclean re
 
-CC := gcc
-SRC := $(wildcard *.c)
+CC = gcc
+SRC = $(wildcard *.c)
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 RM = rm
