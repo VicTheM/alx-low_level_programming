@@ -2,7 +2,7 @@
 .PHONY: all clean oclean fclean re
 
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 RM = rm
