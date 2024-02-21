@@ -2,11 +2,10 @@
 
 CC := gcc
 SRC := $(wildcard *.c)
-OBJ := %.o
+OBJ := $(patsubst %.c, %.o, $(SRC))
 NAME := school
 
-all: main.o school.o
-	${CC} ${wildcard *.o} -o ${NAME}
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
 
-${OBJ}: %.c
-	${CC} -c -o $@ $<
+
