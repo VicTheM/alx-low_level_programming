@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * liner_search - searches an array linerly
+ * linear_search - searches an array linerly
  * avg_time_complexity: O(n)
  *
  * @array: Array to search in
