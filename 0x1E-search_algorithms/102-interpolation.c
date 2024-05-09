@@ -4,7 +4,7 @@
  * interpolation_search - A linear like version of binary search
  *
  * used on sorted items
- * @aray: the array
+ * @array: the array
  * @size: lenght of array
  * @value: search key
  *

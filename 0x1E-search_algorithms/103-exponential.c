@@ -18,7 +18,7 @@ void print_array(int *array, int start, int end)
 
 
 /**
- * exponential_search -
+ * exponential_search - jumps exponentially
  *
  * @array: search space
  * @size: size of search space
