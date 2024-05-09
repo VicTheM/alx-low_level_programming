@@ -36,7 +36,7 @@ int bs_recursive(int *arr, int value, int l, int r)
 	mid = (l + r) / 2;
 	printf("Searching in array: ");
 	print_array(arr, l, r + 1);
-	
+
 	if (arr[mid] == value)
 	{
 		if (arr[mid - 1] == value)
