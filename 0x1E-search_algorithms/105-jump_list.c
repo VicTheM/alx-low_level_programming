@@ -22,7 +22,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		return (NULL);
 	while (t->next && t->n < value && t->index < size)
 	{
-		p = tmp;
+		p = t;
 		for (c = 0; t->next && c < steps; c++)
 			t = t->next;
 		printf("Value checked at index [%ld] = [%i]\n", t->index, t->n);
